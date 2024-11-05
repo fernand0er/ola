@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <style>
+        /* Estilos generales */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            overflow: hidden;
+        }
+
+        /* Carta */
+        .card {
+            position: relative;
+            width: 700px;
+            height: 500px;
+            padding: 50px;
+            color: #333;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            overflow: hidden;
+            transition: height 0.5s ease;
+        }
+
+        .card.closed {
+            height: 70px;
+        }
+
+        .card.open {
+            height: 800px;
+        }
+
+        /* Contenido de la carta */
+        .card-header {
+            font-size: 1.5rem;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .card-content {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.5s ease, max-height 0.5s ease;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .card.open .card-content {
+            opacity: 1;
+            max-height: 800px;
+        }
+
+        /* Botón de abrir */
+        .card button {
+            margin-top: 15px;
+            padding: 8px 12px;
+            border: none;
+            background: #ff6f61;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .card button:hover {
+            background: #ff3b3b;
+        }
+    </style>
+</head>
+<body>
+    <div class="card closed" onclick="toggleCard()">
+        <div class="card-header">para mi linda esposita</div>
+        <div class="card-content">
+            pao <br><br>
+           ¿Puedes creer que ya pasó un mes? ¡Un mes desde que decidimos ser novios Se siente tan loco pensar en todo lo que hemos vivido en tan poco tiempo. De verdad, cada día contigo ha sido como una pequeña aventura, y no sabes lo feliz que estoy de tenerte a mi lado.
+
+Desde que estamos juntos, siento que todo es más bonito. Ya sea viendo una película, caminando juntos, o simplemente hablando de cualquier cosa, siempre encuentro una razón para sonreír cuando estoy contigo. Eres esa persona que me entiende sin que tenga que explicar demasiado, y eso me encanta.
+
+Gracias por ser tú, tan real, tan único, tan tú. Por cada mensaje, por cada mirada y cada momento que compartimos. Nunca imaginé que alguien pudiera hacerme sentir así. No sé qué tenga preparado el futuro para nosotros, pero si es la mitad de bonito que este primer mes, entonces sé que estamos en el camino correcto.
+
+Así que, aquí estamos, ¡un mes juntos y contando! Y no puedo esperar para seguir viviendo momentos contigo. 
+
+es algo interesante porque en mi vida pense poder pasar el tiempo con una persona tan maravillosa como lo eres tu, pues sobre todas las cosas eres la principal razon de porque hago y sigo con mi vida pues tu eres mi mundo tu eres mi mente y eres todo en lo que puedo pensar <br><br>
+            Eres mi inspiración, mi paz y mi felicidad. Gracias por ser tan especial. Te amo con todo mi ser y quiero que siempre recuerdes lo importante que eres para mí. <br><br>
+            Con todo mi amor, <br> tu sol con asma.
+        </div>
+        <button>Abrir Carta</button>
+    </div>
+
+    <script>
+        function toggleCard() {
+            const card = document.querySelector('.card');
+            card.classList.toggle('open');
+            card.classList.toggle('closed');
+        }
+    </script>
+</body>
+</html>
